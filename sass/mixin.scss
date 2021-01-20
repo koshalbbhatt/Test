@@ -1,0 +1,65 @@
+//mixin
+@mixin navbar {
+    margin: 0px; padding: 0px;
+    li {margin: 0px; padding: 0px 10px; border-left: 1px solid #ddd;
+        &:first-child {border-left: none;}
+     a {margin: 0px; padding: 0px; font-size: 15px; color: $primaryColor; 
+        &:hover {color:$SecondryColor}
+     }
+    }
+}
+@mixin slidebar {
+    width: 100%; height: auto; margin: 0px; padding: 0px 0px; display: inline-block; background:$SecondryColor; border-radius: $radiusLeft;
+    h2 {margin: 0px; padding: 20px 0px 15px 20px; color: $WhiteColor; font-size: $MiddFont; font-weight: 700; text-align: left; text-transform: uppercase;}
+    ul {margin: 0px; padding: 0px; display: inline-block;
+        li {margin: 4px 0px; padding: 0px; display: inline-block; width: 100%; height: auto; background: $slidebarBg;
+            a {font-size: 20px; text-align: left; color: $WhiteColor; margin: 0px; padding: 10px 20px; width: 100%; display: inline-block; font-weight: 600; line-height: normal;
+                &:hover {background:$SecondryHover; box-shadow: $HoverShadow;}
+                .fa-angle-double-up {float: right; margin: 4px 0px 0px;}
+            }
+            &.subMenu ul {display: none;}
+            &.subMenu ul.show {display: block;
+                li a {font-size: 18px; font-weight: 400; padding: 4px 20px;
+                    .fa-angle-down {float: right; margin: 6px 0px 0px;}
+                }
+            }
+            
+        }
+    }
+}
+
+@mixin top_seller {
+    margin: 30px 0px 0px; padding: 0px; display: inline-block; width: 100%;
+        h2 {font-size: $MiddFont; color: $primaryColor; margin: 0px; padding: 0px 0px 15px; border-bottom: 2px solid $Orange;}
+        .TopProduct {margin:30px 0px 0px; padding: 30px; border: 1px solid $LightGray;}
+        .Top_details {width: 100%; height: auto; margin: 10px 0px 0px; padding: 0px; display: inline-block;
+            h4 {margin: 0px; padding: 0px; font-size: 20px; text-align: left; color:$SecondryColor;}
+            .ttl_price {margin: 0px; padding: 0px; text-align: left; color:$Orange; font-size: $MiddFont;}
+            .btn_seller {margin: 20px 0 0px; padding: 0px; display: inline-block;
+                a {margin: 0px; padding: 10px 15px; font-size: 16px; text-align: center; color: $primaryColor; border:1px solid $LightGray;
+                    &:hover {background: $SecondryColor; color: $WhiteColor; border-color: $SecondryColor;}
+                }
+            }
+        } 
+        ul {margin:15px 0px 0px; padding: 0px; display: inline-block;
+            li {margin: 0px; padding: 0px 30px 0px 0px; display: inline-block;
+                a {color: $Orange; font-size: 15px; font-weight: 500; text-align: left;
+                &:hover {text-decoration: underline;}
+            }
+            }
+        }   
+}
+
+@mixin footer {
+    width: 100%; height: auto; margin: 80px 0px 0px; padding: 50px 0px; background: $footerbg;
+     h2 {width: 100%; height: auto; margin: 0px 0px 15px; font-size: 25px; font-weight: 600; text-align: left; color: $primaryColor;}
+     ul {width: 100%; height: auto; margin: 0px; padding: 0px;display: inline-block;
+        li {margin: 10px 0px 0px; padding: 0px; display: inline-block; text-align: left; width: 100%;
+            &:first-child {margin-top: 0px;}
+            a {font-size: 16px; text-align: left; color: $primaryColor; margin: 0px; padding: 0px;
+                &:hover {color: $SecondryColor;}
+                i {margin: 0px 10px 0px;}
+            }
+        }
+    }
+} 

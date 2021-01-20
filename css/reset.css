@@ -1,0 +1,5 @@
+a, a:hover, a:focus {outline: none; text-decoration: none; border: none;}
+li, li:hover, li:focus {outline: none; text-decoration: none; border: none;}
+img {outline: none; max-width: 100%;}
+*, ::after, ::before {box-sizing: border-box;}
+input, button, select, textarea {border:none; box-shadow: none; outline: none;}
